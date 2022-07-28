@@ -10,3 +10,4 @@ python-dotenv
 django-extensions
 whitenoise
 django-heroku
+gunicorn
