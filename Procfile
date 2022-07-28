@@ -1,0 +1,1 @@
+web: gunicorn estudos6.wsgi
