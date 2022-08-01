@@ -8,3 +8,6 @@ class Quiz(models.Model):
     imagem = models.URLField(
         max_length=1024,
     )
+
+    def __str__(self):
+        return self.pergunta

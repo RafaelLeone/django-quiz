@@ -1,11 +1,16 @@
 from django.shortcuts import redirect, render
 
 from quiz.forms import QuizModelForm
+from quiz.models import Quiz
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'quiz/index.html', {})
+    quizes = Quiz.objects.all()
+    contexto = {
+        'quizes': quizes
+    }
+    return render(request, 'quiz/index.html', contexto)
 
 
 def quiz_form(request):
